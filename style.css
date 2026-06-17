@@ -997,11 +997,15 @@ section:not(#hero) { padding-block: 80px; }
   letter-spacing: -0.04em; margin-bottom: 44px;
 }
 .contact-title em { color: var(--acc); font-style: italic; }
+.contact-links {
+  display: flex; flex-direction: column; align-items: flex-start;
+  gap: 16px; margin-bottom: 52px;
+}
 .contact-mail {
   display: inline-flex; align-items: center; gap: 8px;
   font-family: var(--D); font-size: clamp(0.85rem, 2.2vw, 1.15rem);
   font-weight: 600; border-bottom: 1px solid var(--border);
-  padding-bottom: 3px; margin-bottom: 52px; cursor: none;
+  padding-bottom: 3px; cursor: none;
   transition: color 0.2s, border-color 0.2s, transform 0.25s var(--ease);
 }
 .contact-mail:hover { color: var(--acc); border-color: var(--acc); transform: translateX(5px); }
@@ -1191,7 +1195,8 @@ section:not(#hero) { padding-block: 80px; }
   .faq-ans p        { padding: 0 20px 16px; font-size: 0.85rem; }
   #contact          { padding: 60px 20px; }
   .contact-title    { font-size: clamp(1.9rem, 11vw, 3rem); margin-bottom: 28px; }
-  .contact-mail     { font-size: 0.82rem; margin-bottom: 36px; }
+  .contact-mail     { font-size: 0.82rem; }
+  .contact-links    { margin-bottom: 36px; }
   #cform input,
   #cform textarea   { padding: 11px 14px; font-size: 0.85rem; }
   #footer           { padding: 28px 20px 20px; }

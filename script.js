@@ -378,8 +378,10 @@ function sendMail(e) {
   e.preventDefault();
   const n = document.getElementById('fn').value;
   const em = document.getElementById('fe').value;
+  const ph = document.getElementById('fp').value;
   const m = document.getElementById('fm').value;
-  window.location.href = `mailto:hvgtech16@gmail.com?subject=${encodeURIComponent('Project inquiry from ' + n)}&body=${encodeURIComponent(`Hi Harsha,\n\nName: ${n}\nEmail: ${em}\n\n${m}`)}`;
+  const phoneLine = ph ? `Phone: ${ph}\n` : '';
+  window.location.href = `mailto:hvgtech16@gmail.com?subject=${encodeURIComponent('Project inquiry from ' + n)}&body=${encodeURIComponent(`Hi Harsha,\n\nName: ${n}\nEmail: ${em}\n${phoneLine}\n${m}`)}`;
   document.getElementById('fsent').hidden = false;
   e.target.reset();
 }
