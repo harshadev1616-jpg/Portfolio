@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Harsha Vardan Gowda — Full-stack web developer for freelancers and agencies. Django, Python, REST APIs, web apps & landing pages."/>
+  <meta name="author" content="Harsha Vardan Gowda"/>
+  <meta name="theme-color" content="#0a0a0a"/>
+  <title>Harsha Vardan Gowda — Web Developer</title>
+
+  <!-- Favicon: lime "H" mark -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a0a0a'/%3E%3Ctext x='50%25' y='53%25' dominant-baseline='central' text-anchor='middle' font-family='Arial,sans-serif' font-size='17' font-weight='800' fill='%23c8ff00'%3EH%3C/text%3E%3C/svg%3E"/>
+
+  <!-- Open Graph / social share -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Harsha Vardan Gowda — Web Developer"/>
+  <meta property="og:description" content="Full-stack web developer for freelancers & agencies. I build web apps, websites, and APIs — white-label ready."/>
+  <meta property="og:site_name" content="HVG."/>
+
+  <link rel="stylesheet" href="style.css?v=14"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- PROGRESS -->
+  <div id="scroll-progress"></div>
+
+
+  <!-- CURSOR -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- BACK TO TOP -->
+  <button id="to-top" aria-label="Back to top">
+    <span class="tt-arrow">↑</span>
+  </button>
+
+  <!-- LOADER (split panels) -->
+  <div id="loader">
+    <div class="lp top"></div>
+    <div class="lp bot"></div>
+    <div class="loader-content">
+      <span class="loader-logo">HVG<span class="acc">.</span></span>
+      <div class="loader-bar-track"><div class="loader-bar" id="loader-bar"></div></div>
+      <span class="loader-num" id="loader-num">0</span>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <a href="#hero" class="nav-logo">HVG<span class="acc">.</span></a>
+    <div class="nav-mid">
+      <span class="nav-avail"><span class="avail-dot"></span>Let's build something</span>
+    </div>
+    <div class="nav-end">
+      <span class="nav-clock" id="nav-clock">—</span>
+      <button class="burger" id="burger" aria-label="Toggle menu">
+        <span class="b1"></span><span class="b2"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- FULLSCREEN MENU -->
+  <div id="menu" role="dialog" aria-hidden="true">
+    <div class="menu-wrap">
+      <nav class="menu-nav">
+        <a href="#work"     class="mlink" data-n="01">Work</a>
+        <a href="#services" class="mlink" data-n="02">Services</a>
+        <a href="#about"    class="mlink" data-n="03">About</a>
+        <a href="#contact"  class="mlink" data-n="04">Contact</a>
+      </nav>
+      <div class="menu-bottom">
+        <a href="mailto:hvgtech16@gmail.com" class="menu-email">hvgtech16@gmail.com</a>
+        <div class="menu-socials">
+          <a href="https://github.com/harshadev1616-jpg" target="_blank" rel="noopener" class="msoc">GitHub ↗</a>
+          <a href="https://www.instagram.com/hvgtech16" target="_blank" rel="noopener" class="msoc">Instagram ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SMOOTH SCROLL WRAPPER — page content only. Nav + menu stay OUTSIDE so
+       their position:fixed isn't broken by this wrapper's transform. -->
+  <div id="smooth">
+
+  <!-- ─── HERO ─── -->
+  <section id="hero">
+    <div class="hero-bg-num" aria-hidden="true">01</div>
+    <div class="hero-tag">
+      <span id="greeting">Hello</span>
+      <span id="greeting-flag">👋</span>
+    </div>
+    <h1 class="hero-title">
+      <span class="hl"><span class="hli">Web developer</span></span>
+      <span class="hl italic"><span class="hli">for agencies.</span></span>
+    </h1>
+    <div class="hero-foot">
+      <p class="hero-copy">I build the web apps and websites your clients need — fast, clean, production-ready. You handle the relationship; I handle the code.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="pill mag">Let's build →</a>
+        <a href="#work" class="pill ghost mag">See work ↓</a>
+      </div>
+    </div>
+    <div class="scroll-cue" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="cue-line"></div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-inner">
+      <span>Django</span><em>✦</em><span>Python</span><em>✦</em>
+      <span>REST APIs</span><em>✦</em><span>Web Apps</span><em>✦</em>
+      <span>PostgreSQL</span><em>✦</em>
+      <span>Landing Pages</span><em>✦</em><span>Backends</span><em>✦</em>
+      <span>Django</span><em>✦</em><span>Python</span><em>✦</em>
+      <span>REST APIs</span><em>✦</em><span>Web Apps</span><em>✦</em>
+      <span>PostgreSQL</span><em>✦</em>
+      <span>Landing Pages</span><em>✦</em><span>Backends</span><em>✦</em>
+    </div>
+  </div>
+
+  <!-- ─── WORK ─── -->
+  <section id="work">
+    <div class="sec-head">
+      <span class="sec-label">Selected work</span>
+      <span class="sec-year">2025 – 2026</span>
+    </div>
+
+    <div class="proj-grid">
+
+      <article class="proj-card rev" data-anim="from-left">
+        <div class="proj-card-inner aura-card">
+          <div class="proj-card-bg">
+            <div class="aura-flame"></div>
+            <span class="aura-text">AURA</span>
+            <span class="aura-sub">ARCHIVES</span>
+          </div>
+        </div>
+        <div class="proj-meta">
+          <div class="proj-meta-top">
+            <span class="proj-num">01</span>
+            <span class="proj-year">2026 · Live</span>
+          </div>
+          <h2 class="proj-name">Aura Archives</h2>
+          <p class="proj-sub">Production e-commerce platform for a premium handmade candle brand — full storefront (shop, variants, cart, Razorpay + COD checkout, order tracking), customer accounts with wishlist, loyalty points & referrals, plus a custom admin analytics dashboard, CMS, coupons, blog & reviews. Django 5, Tailwind, PostgreSQL.</p>
+          <div class="proj-chips">
+            <span>Django 5</span><span>PostgreSQL</span><span>Razorpay</span><span>Tailwind</span>
+          </div>
+          <div class="proj-links">
+            <a href="https://aura-archives.vercel.app" target="_blank" rel="noopener" class="proj-link">View live ↗</a>
+            <a href="https://github.com/harshadev1616-jpg/AURA-ARCHIVES" target="_blank" rel="noopener" class="proj-link">GitHub ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj-card rev" data-anim="from-right">
+        <div class="proj-card-inner jarvis-card">
+          <div class="proj-card-bg">
+            <div class="jv-orb"></div>
+            <span class="jv-text">J.A.R.V.I.S.</span>
+          </div>
+        </div>
+        <div class="proj-meta">
+          <div class="proj-meta-top">
+            <span class="proj-num">02</span>
+            <span class="proj-year">2026</span>
+          </div>
+          <h2 class="proj-name">JARVIS</h2>
+          <p class="proj-sub">AI Voice Assistant — Python, LLMs, wake-word detection, TTS, full PC control. A real movie-grade assistant.</p>
+          <div class="proj-chips">
+            <span>AI</span><span>Python</span><span>Voice</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj-card rev" data-anim="from-left">
+        <div class="proj-card-inner apex-card">
+          <div class="proj-card-bg">
+            <span class="ap-text">APEX</span>
+            <span class="ap-sub">PREDATOR</span>
+          </div>
+        </div>
+        <div class="proj-meta">
+          <div class="proj-meta-top">
+            <span class="proj-num">03</span>
+            <span class="proj-year">2025</span>
+          </div>
+          <h2 class="proj-name">Apex Predator</h2>
+          <p class="proj-sub">Full-stack Django web application with REST API, admin panel, and authentication — production-ready from day one.</p>
+          <div class="proj-chips">
+            <span>Django</span><span>Python</span><span>REST API</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="proj-card rev" data-anim="from-right">
+        <div class="proj-card-inner gym-card">
+          <div class="proj-card-bg">
+            <span class="gym-text">TON</span>
+            <span class="gym-sub">HOUSE GYM</span>
+          </div>
+        </div>
+        <div class="proj-meta">
+          <div class="proj-meta-top">
+            <span class="proj-num">04</span>
+            <span class="proj-year">2026</span>
+          </div>
+          <h2 class="proj-name">Ton House Gym</h2>
+          <p class="proj-sub">Full gym landing site — fixed blur navbar with mobile slide-in menu, full-viewport hero, 3 training programs (Strength, Fat Loss, Bodybuilding), transformations gallery, 3-tier pricing (₹1500 / ₹4000 / ₹12000), member reviews, and scroll-reveal animations. Pure HTML/CSS/JS, zero dependencies.</p>
+          <div class="proj-chips">
+            <span>HTML</span><span>CSS</span><span>JS</span>
+          </div>
+          <a href="https://github.com/harshadev1616-jpg/ton-house-gym" target="_blank" rel="noopener" class="proj-link">View on GitHub ↗</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ─── SERVICES ─── -->
+  <section id="services">
+    <div class="sec-head">
+      <span class="sec-label">What I do</span>
+    </div>
+    <div class="svcs-manifesto">
+      <p>I take your idea from <em>brief</em> to <em>live URL</em> — and make you look good to your client.</p>
+    </div>
+    <div class="svcs-list">
+      <div class="svc rev" data-anim="slide-left" aria-expanded="false">
+        <span class="svc-n">01</span>
+        <div class="svc-body">
+          <h3>Web Applications</h3>
+          <p>Custom Django apps — scalable architecture, clean admin panels, solid auth, deploy-ready. Built to last, not to demo.</p>
+          <div class="svc-detail">
+            <ul>
+              <li>Custom data models &amp; a Django admin tailored to how you actually work</li>
+              <li>User accounts, roles &amp; permissions</li>
+              <li>Payment integration (Razorpay / Stripe) &amp; checkout flows</li>
+              <li>PostgreSQL database design &amp; migrations</li>
+              <li>Deployed, configured &amp; handed over production-ready</li>
+            </ul>
+          </div>
+        </div>
+        <span class="svc-arr">→</span>
+      </div>
+      <div class="svc rev" data-anim="slide-left" aria-expanded="false">
+        <span class="svc-n">02</span>
+        <div class="svc-body">
+          <h3>Landing Pages &amp; Sites</h3>
+          <p>Sharp, fast marketing sites and portfolios. Sub-second load times, pixel-perfect on every screen.</p>
+          <div class="svc-detail">
+            <ul>
+              <li>Responsive, mobile-first layouts that hold up on every device</li>
+              <li>Smooth scroll animations &amp; micro-interactions</li>
+              <li>SEO meta tags, Open Graph &amp; sitemap baked in</li>
+              <li>Optimised assets for sub-second load times</li>
+              <li>Contact forms &amp; analytics wired up and working</li>
+            </ul>
+          </div>
+        </div>
+        <span class="svc-arr">→</span>
+      </div>
+      <div class="svc rev" data-anim="slide-left" aria-expanded="false">
+        <span class="svc-n">03</span>
+        <div class="svc-body">
+          <h3>REST APIs &amp; Backends</h3>
+          <p>Well-structured, documented APIs your team can build on. Auth, databases, rate-limiting — handled properly.</p>
+          <div class="svc-detail">
+            <ul>
+              <li>Django REST Framework endpoints, clean &amp; predictable</li>
+              <li>Token / JWT authentication &amp; permissions</li>
+              <li>Database schema design, migrations &amp; seed data</li>
+              <li>Pagination, filtering &amp; rate-limiting done right</li>
+              <li>Docs your frontend team can actually build against</li>
+            </ul>
+          </div>
+        </div>
+        <span class="svc-arr">→</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ─── -->
+  <section id="about">
+    <div class="about-wrap">
+      <div class="about-l rev" data-anim="from-left">
+        <span class="sec-label">About</span>
+        <h2 class="about-title" data-scramble>I write code.<br/>I ship things.<br/><em>I mean it.</em></h2>
+        <div class="about-photo">
+          <div class="photo-fallback">HVG</div>
+          <!-- swap fallback for: <img src="photo.jpg" alt="Harsha Vardan Gowda"/> -->
+        </div>
+      </div>
+      <div class="about-r rev" data-anim="from-right">
+        <p>Hi — I'm Harsha Vardan Gowda, a full-stack web developer based in India. I build web apps, websites, and APIs for <strong>freelancers and agencies</strong> who need a reliable backend developer they can put their name on.</p>
+        <p>I work with Python and Django on the backend and clean HTML/CSS/JS on the front. No bloated frameworks, no unnecessary dependencies. Code that does exactly what it needs to — and runs without drama in production.</p>
+        <p>If you're a freelancer or agency that's outgrown what you can handle alone, I integrate quietly into your workflow, hit deadlines, and make you look good to your clients.</p>
+
+        <div class="stack-row">
+          <span>Python</span><span>Django</span><span>PostgreSQL</span>
+          <span>HTML/CSS/JS</span><span>REST APIs</span><span>AI / LLMs</span><span>Git</span>
+        </div>
+
+        <div class="stats-row">
+          <div class="stat">
+            <div class="stat-num-row"><span class="sn" data-target="2">0</span><span class="su">+</span></div>
+            <span class="sl">Years shipping</span>
+          </div>
+          <div class="stat">
+            <div class="stat-num-row"><span class="sn" data-target="10">0</span><span class="su">+</span></div>
+            <span class="sl">Projects built</span>
+          </div>
+          <div class="stat">
+            <div class="stat-num-row"><span class="sn" data-target="24">0</span><span class="su">h</span></div>
+            <span class="sl">Response time</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROCESS ─── -->
+  <section id="process">
+    <div class="sec-head">
+      <span class="sec-label">How it works</span>
+    </div>
+    <div class="process-grid">
+      <div class="process-step rev" data-anim="from-bottom">
+        <span class="ps-num">01</span>
+        <h3>You brief me</h3>
+        <p>Tell me what needs to be built. I ask the right questions, scope it honestly, and send a proposal you can actually rely on.</p>
+      </div>
+      <div class="process-step rev" data-anim="from-bottom">
+        <span class="ps-num">02</span>
+        <h3>I build in cycles</h3>
+        <p>Short sprints — you see real progress every few days, not a black box that opens after 6 weeks. Feedback shapes the next cycle.</p>
+      </div>
+      <div class="process-step rev" data-anim="from-bottom">
+        <span class="ps-num">03</span>
+        <h3>You ship to your client</h3>
+        <p>I hand over clean code, docs, and a deployed product. White-label ready. Your client sees your name on it — not mine.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FAQ ─── -->
+  <section id="faq">
+    <div class="sec-head"><span class="sec-label">FAQ</span></div>
+    <div class="faq-list">
+      <div class="faq-item rev">
+        <button class="faq-q" aria-expanded="false">
+          <span>Can I white-label your work?</span><span class="faq-ico">+</span>
+        </button>
+        <div class="faq-ans"><p>Yes — completely. NDA is fine. I operate as a silent development partner. Your clients will never know I exist unless you want them to.</p></div>
+      </div>
+      <div class="faq-item rev">
+        <button class="faq-q" aria-expanded="false">
+          <span>Fixed-price or hourly?</span><span class="faq-ico">+</span>
+        </button>
+        <div class="faq-ans"><p>Both. Fixed-price for defined scopes, hourly for retainers, bug fixes, or evolving projects. We'll find whatever structure makes sense.</p></div>
+      </div>
+      <div class="faq-item rev">
+        <button class="faq-q" aria-expanded="false">
+          <span>What if I already have a codebase?</span><span class="faq-ico">+</span>
+        </button>
+        <div class="faq-ans"><p>No problem. I've jumped into existing Django/Python projects before. Send me the repo and I'll give you an honest read — no commitment needed.</p></div>
+      </div>
+      <div class="faq-item rev">
+        <button class="faq-q" aria-expanded="false">
+          <span>How long does a project take?</span><span class="faq-ico">+</span>
+        </button>
+        <div class="faq-ans"><p>Landing page: 1–2 weeks. Web app: 3–6 weeks. API/backend: 1–3 weeks. I give you a number I'll actually hit — not a number designed to win the pitch.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ─── -->
+  <section id="contact">
+    <div class="contact-wrap rev" data-anim="from-bottom">
+      <span class="sec-label">Get in touch</span>
+      <h2 class="contact-title">Got a project?<br/><em>Let's talk.</em></h2>
+      <a href="mailto:hvgtech16@gmail.com" class="contact-mail mag">
+        hvgtech16@gmail.com <span>↗</span>
+      </a>
+      <form id="cform" onsubmit="sendMail(event)">
+        <div class="form-2col">
+          <input type="text"  id="fn" name="name"    placeholder="Your name"       required/>
+          <input type="email" id="fe" name="email"   placeholder="your@email.com"  required/>
+        </div>
+        <textarea id="fm" name="message" rows="4" placeholder="Tell me about the project…" required></textarea>
+        <button type="submit" class="pill mag">Send message →</button>
+        <p id="fsent" hidden>✓ Sent — I'll reply within 24 hours.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer id="footer">
+    <div class="footer-top">
+      <span class="footer-logo">HVG<span class="acc">.</span></span>
+      <div class="footer-soc">
+        <a href="https://github.com/harshadev1616-jpg" target="_blank" rel="noopener" class="fsoc">GitHub ↗</a>
+        <a href="https://www.instagram.com/hvgtech16" target="_blank" rel="noopener" class="fsoc">Instagram ↗</a>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <span>© 2026 Harsha Vardan Gowda</span>
+      <span id="foot-clock">—</span>
+      <span>India · IST</span>
+    </div>
+  </footer>
+
+  </div><!-- end #smooth -->
+
+  <script src="script.js?v=9"></script>
+</body>
+</html>
