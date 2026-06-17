@@ -325,7 +325,7 @@ document.querySelectorAll('.stat').forEach(s => so.observe(s));
    PAGE TITLE PER SECTION
 ══════════════════════════════════════ */
 const titleMap = {
-  hero:    'Harsha Vardan Gowda — Web Developer',
+  hero:    'Harsha Vardhan Gowda — Web Developer',
   work:    'Work — HVG',
   services:'Services — HVG',
   about:   'About — HVG',
